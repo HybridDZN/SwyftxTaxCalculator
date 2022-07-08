@@ -3,12 +3,13 @@ import pandas
 
 class InitialHoldings:
     @staticmethod
-    def calculate_initial_holdings(file_path):
+    def generate_dataframe(file_path):
         return pandas.read_csv(
             file_path, skiprows=[0, 2], usecols=[0, 2, 3, 9],
             keep_default_na=False,
         )
-    open_position = calculate_initial_holdings('data/initial.csv')
+
+    open_position = generate_dataframe('data/initial.csv')
     # print('Initial State')
     # print(open_position)
     position_map = {}
@@ -20,4 +21,3 @@ class InitialHoldings:
     print('Asset : Initial Value')
     for key, value in position_map.items():
         print(key, ' : ', value)
-
