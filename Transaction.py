@@ -6,9 +6,8 @@ class Transaction:
         self.event = event
 
     def __str__(self):
-        print('Asset: ', self.name)
-        print('Value: ', self.value)
-        print('Event: ', end=" ")
-        return self.event
+        print('Asset: ', self.name, '| Value: ', end="")
+        #print('Event: ', end=" ")
+        return self.value
 
     

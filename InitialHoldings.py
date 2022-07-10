@@ -17,7 +17,9 @@ class InitialHoldings:
         if open_position['Asset'][i] not in position_map:
             position_map[open_position['Asset'][i]] = open_position['AUD Value'][i]
     position_map = {key: value for key, value in position_map.items() if value >= 1.0}
-    print('\nInitial Holdings Dictionary')
-    print('Asset : Initial Value')
-    for key, value in position_map.items():
-        print(key, ' : ', value)
+
+    def print_initial_holdings(self):
+        print('\nInitial Holdings Dictionary')
+        print('Asset : Initial Value')
+        for key, value in self.position_map.items():
+            print(key, ' : ', value)
