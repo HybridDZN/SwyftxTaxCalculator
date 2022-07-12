@@ -19,7 +19,8 @@ sell_list = list_creator.create_sell_list()
 
 average_calculator = Average(transactions, buy_list, sell_list)
 
-print('Capital Gain using average: ', average_calculator.calculate_average())
-
+print('Capital Gain using average: $' +
+      str(round(average_calculator.calculate_average(), 2)) if average_calculator.calculate_average() > 0
+      else 'Capital Loss using average: $' + str(round(average_calculator.calculate_average(), 2)))
 
 
