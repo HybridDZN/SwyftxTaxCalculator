@@ -23,3 +23,6 @@ class InitialHoldings:
         print('Asset : Initial Value')
         for key, value in self.position_map.items():
             print(key, ' : ', value)
+
+    def get_values(self):
+        return self.position_map.values()

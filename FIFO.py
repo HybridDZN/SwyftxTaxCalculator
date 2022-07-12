@@ -13,3 +13,5 @@ class FIFO:
                 for item in range(len(self.sell_list)):
                     if transaction['Asset'][item] == self.sell_list.name[item]:
                         print('success')
+                        self.total_value += self.buy_list.value[item] - self.sell_list.value[item]
+                        print(self.total_value)

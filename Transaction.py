@@ -5,9 +5,10 @@ class Transaction:
         self.value = value
         self.event = event
 
-    def __str__(self):
-        print('Asset: ', self.name, '| Value: ', end="")
-        #print('Event: ', end=" ")
+    def get_value(self):
         return self.value
 
-    
+    def __str__(self):
+        print('Asset: ', self.name, '| Value: ', end="")
+        # print('Event: ', end=" ")
+        return self.value
